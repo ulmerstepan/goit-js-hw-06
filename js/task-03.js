@@ -18,3 +18,11 @@ const images = [
 
 // Все элементы галереи должны добавляться в DOM за одну операцию вставки.
 // Добавь минимальное оформление галереи флексбоксами или гридами через CSS классы.
+
+const galleryEl = document.querySelector('.gallery');
+const makeGallary = images
+  .map(image => `<li><img src = ${image.url} alt = ${image.alt} width = 350 height = 230></li>`)
+  .join(``);
+galleryEl.insertAdjacentHTML('beforeend', makeGallary);
+galleryEl.style.display = 'flex';
+galleryEl.style.listStyle = 'none';
