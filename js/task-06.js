@@ -10,15 +10,14 @@
 
 
 const inputEl = document.querySelector("#validation-input");
-console.log(inputEl.dataset.length);
-
-inputEl.addEventListener("blur", onFocusLost);
 
 const onFocusLost = () => {
-  if (inputEl.value.length >= inputEl.dataset.length) {
-    inputEl.classList.remove("invalid");
-    inputEl.classList.add("valid");
-  } else {
-    inputEl.classList.add("invalid");
-  }
+    if (inputEl.value.length >= inputEl.dataset.length) {
+        inputEl.classList.remove("invalid");
+        inputEl.classList.add("valid");
+    } else {
+        inputEl.classList.add("invalid");
+    }
 }
+
+inputEl.addEventListener("blur", onFocusLost);

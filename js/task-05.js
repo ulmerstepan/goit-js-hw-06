@@ -6,10 +6,10 @@
 const inputEl = document.querySelector("#name-input");
 const outputEl = document.querySelector("#name-output");
 
-inputEl.addEventListener("input", onInputChange);
-
 const onInputChange = () => {
   inputEl.value !== ""
     ? (outputEl.textContent = inputEl.value)
     : (outputEl.textContent = "Anonymous");
 }
+
+inputEl.addEventListener("input", onInputChange);
